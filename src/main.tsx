@@ -13,6 +13,10 @@ import Dashboard from "./pages/Dashboard.tsx";
 import Attendance from "./pages/Attendance.tsx";
 import Confessions from "./pages/Confessions.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Events from "./pages/Events.tsx";
+import Marketplace from "./pages/Marketplace.tsx";
+import Notices from "./pages/Notices.tsx";
+import Buddies from "./pages/Buddies.tsx";
 import "./types/global.d.ts";
 import { useAuth } from "@/hooks/use-auth";
 
@@ -73,6 +77,26 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/confessions" element={
               <ProtectedRoute>
                 <Confessions />
+              </ProtectedRoute>
+            } />
+            <Route path="/events" element={
+              <ProtectedRoute>
+                <Events />
+              </ProtectedRoute>
+            } />
+            <Route path="/marketplace" element={
+              <ProtectedRoute>
+                <Marketplace />
+              </ProtectedRoute>
+            } />
+            <Route path="/notices" element={
+              <ProtectedRoute>
+                <Notices />
+              </ProtectedRoute>
+            } />
+            <Route path="/buddies" element={
+              <ProtectedRoute>
+                <Buddies />
               </ProtectedRoute>
             } />
             <Route path="*" element={<NotFound />} />
